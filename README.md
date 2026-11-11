@@ -1,4 +1,4 @@
-﻿# homelab-platform
+# homelab-platform
 
 Home lab for practicing senior infrastructure and AI-Ops work: CI/CD, LLMOps, monitoring, security and compliance. This is a lab, not a production system. Each project has design notes, configs and evidence in this repo.
 
@@ -12,6 +12,8 @@ flowchart TB
   LAN --- ESXI["VMware ESXi host"]
   ESXI --- DC["Windows Server 2025 DC: AD DS, DNS, AD CS, NPS"]
   LAN --- K8S["Kubernetes cluster: control plane and worker"]
+  LAN --- SWARM["Docker Swarm: manager and worker"]
+  SWARM --- APPS["Portainer, Uptime Kuma, Nextcloud, Ollama, Open WebUI"]
   DC -.->|"LDAPS"| FG
   FG -.->|"RADIUS"| DC
   WIFI -.->|"802.1X login"| DC
