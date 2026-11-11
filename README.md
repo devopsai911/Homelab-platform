@@ -49,5 +49,4 @@ Already built outside this repo: Active Directory with LDAPS, an Enterprise CA, 
 
 - No secrets in Git. A .gitignore blocks common secret files, and gitleaks scans the repo.
 - Internal addresses and credentials are never published.
-
-Secrets scanning: gitleaks runs as a pre-commit hook on every commit.
+- Gitleaks runs as a pre-commit hook on every commit.
